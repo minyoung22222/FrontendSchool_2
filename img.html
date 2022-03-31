@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="I=E=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <!-- <img src="" alt="">
+    //srcset -> 원본크기가 큰 것부터
+    <img srcset="/images/rabbit_500.png 500w, /images/rabbit_300.png 300w, /images/rabbit_150.png 150w" 
+    sizes="(min-width:960px) 500px, (min-width:640px) 300px, 900px"
+    src="images/rabbit_150.png" alt="">
+    
+    <img src="images/peng.png" alt=""> -->
+
+    <picture>
+        <source srcset="images/rabbit_500.png" 
+        media="(min-width:960px)"> 
+        <source srcset="images/rabbit_300.png" 
+        media="(min-width:640px)"> 
+        <!--media태그는 이미지 자체가 바뀜 
+        x,y,sizes는 동일 이미지이지만 사이즈가 바뀜-->
+        <img src="images/rabbit_150.png" alt="">
+    </picture>
+</body>
+</html>
+
+<!-- 
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <img width="200px" srcset="../images/rabbit_500.png 3x, ../images/rabbit_300.png 2x" src="../images/rabbit_150.png"
+        alt="test"> -->
+
+        <img srcset="images/rabbit_500.png 500w,
+        images/rabbit_300.png 300w, images/rabbit_150.png 150w" sizes="(min-width:960px) 500px, (min-width:640px) 300px,
+        900px" src="images/rabbit_150.png" alt="rabbit">
+    </body>
+    
+    </html>
+ -->
