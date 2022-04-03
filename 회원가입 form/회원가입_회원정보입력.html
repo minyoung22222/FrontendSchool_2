@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="회원가입_회원정보입력.css">
+</head>
+<body>
+    <section class="wrapper">
+        <header class="header"><h1>logo</h1></header>
+            <main class="main">
+                
+                <form class="form" action="" method="">
+                    <article>
+                        <label>아이디</label><br>
+                        <input type="text" name="userId">
+                    </article>
+                        <article>
+                            <label>비밀번호</label><br>
+                            <input type="password" name="userPw">
+                        </article>
+
+                        <article>
+                            <label>비밀번호 재확인</label><br>
+                            <input type="password" name="userPw">
+                        </article>
+
+                        <article>
+                            <label>이름</label><br>
+                            <input type="text" name="userName">
+                        </article>
+
+                        <article>
+                            <label>생년월일</label><br>
+                            <input class="birth" type="date" name="birthyear">
+                        </article>
+                    
+                        <article class="sex">
+                            <label>성별</label><br>
+                            <label for="male">남</label> 
+                            <input type="radio" name="성별" id="male">
+                            <label for="female">여</label> 
+                            <input type="radio" name="성별" id="female">
+                        </article>
+
+                        <article>
+                            <label>본인 확인 이메일(선택)</label> <br>
+                            <input type="text" name="useremail">
+                        </article>
+
+                        <article>
+                            <label>휴대전화</label> <br>
+                            <input type="text" name="usertel">
+                            <input type="button" name="인증번호">
+                            <input type="text" name="인증번호">
+                        </article>
+
+                        <article>
+                            <button class="btn" type="submit">가입하기</button>
+                        </article>
+
+                    
+                </form>
+            </main>
+        <footer class="footer">footer</footer>
+    </section>  
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+body, button, h1, p {
+    margin: 0;
+}
+
+input, button {
+    padding: 0;
+    
+}
+
+button {
+    border: 0;
+}
+
+.wrapper {
+    margin: 100px auto;
+    padding: 20px;
+    width: 500px;
+    box-shadow: 0px 0px 10px rgb(185, 185, 185);
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(255, 193, 255), rgb(166, 221, 255));
+}
+
+.header {
+    /* background-color: #fff; */
+    height: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h1 {
+    margin: 10px;
+    font-size: 35px;
+    /* color: rgb(172, 115, 251); */
+}
+
+.main {
+    /* background-color: orange  ; */
+    height: auto;
+}
+
+.login {
+    /* background-color:lightskyblue; */
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px thick double rgb(185, 136, 255);
+}
+
+.text {
+    border: 1px solid rgb(183, 183, 183)
+}
+
+.login .text , .btn {
+    width: 300px;
+    height: 35px;
+    margin: 5px;
+}
+
+.hold {
+    margin-left: -170px;
+}
+
+
+.hold label {
+    font-size: 13px;
+}
+
+.hold input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+}
+
+.login .btn {
+    background-color: rgb(185, 136, 255);
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.login .btn:hover {
+    background-color: rgb(165, 101, 255);
+}
+
+
+.join a {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+}
+
+
+
+.footer {
+    /* background-color: purple; */
+    height: 50px;
+    text-align: center;
+    font-size: 12px;
+    
+}
+
+.footer p {
+    padding-top: 30px;
+    color: rgb(60, 60, 60);
+}

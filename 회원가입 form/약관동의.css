@@ -1,0 +1,82 @@
+.wrapper {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 800px;
+    background: linear-gradient(to right, rgb(255, 193, 255), rgb(166, 221, 255));
+}
+
+.header {
+    /* background-color: cornflowerblue; */
+    /* color: rgb(172, 115, 251); */
+    height: 90px;
+}
+
+.header h1 {
+    text-align: center;
+    padding: 30px;
+    font-size: 35px;
+}
+
+.main {
+    /* background-color: lightpink; */
+}
+
+.contents {
+    margin: 30px;
+}
+
+.chkimg {
+    width: 20px;
+    height: 20px;
+    
+}
+
+.title {
+    margin: 10px;
+}
+
+.textarea {
+    width: 90%;
+    height: 150px;
+    border: 0;
+    box-shadow: 0px 0px 10px rgba(185, 185, 185, 0.465);
+    resize: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+.text1 {
+    text-align: center;
+}
+
+.agree {
+    text-align: right;
+}
+
+.footer {
+    /* background-color: thistle; */
+    height: 100px;
+    text-align: center;
+}
+
+.btngo {
+    margin: 20px;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    border: 0;
+    background-color: rgb(185, 136, 255);
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btngo:hover {
+    background-color: rgb(165, 101, 255);
+}
