@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+         .container:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        section {
+            width: 800px;
+            padding: 50px;
+            float: left;
+        }
+        aside {
+            border: solid 1px black;
+            float: left;
+            width: 200px;
+            height: 800px;
+            padding: 20px;
+            /* fixed로 고치고 그 차이를 설명해보세요. */
+            position: sticky;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis, aperiam, ab rerum eius dolores ratione aspernatur aliquam, exercitationem voluptatem ullam tempore repellendus. Laudantium dicta nam obcaecati illum consequuntur cum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis, aperiam, ab rerum eius dolores ratione aspernatur aliquam, exercitationem voluptatem ullam tempore repellendus. Laudantium dicta nam obcaecati illum consequuntur cum?</p>
+    <!-- h1{hello world}+(p>lorem)*2
+    .container>(section>h2{hello world}+(p>lorem)*20)+aside>h3{hello world}+p>lorem -->
+    <div class="container">
+        <section>
+            <h2>hello world</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur deleniti, tempore fuga voluptatum veniam fugiat esse ea aspernatur tempora suscipit repellendus rem nobis mollitia a totam harum laudantium non rerum!</p>
+            <p>Fugiat qui reprehenderit blanditiis voluptate sed, nulla magni quod eaque dignissimos, adipisci modi iste est amet placeat ipsum ut culpa. Fugiat perspiciatis eos, atque quisquam porro a repudiandae nulla quasi.</p>
+            <p>Sapiente, possimus quibusdam ducimus esse voluptas quia nulla. Maxime sed voluptatem eligendi repellendus voluptas accusamus quam, dolore sit libero qui nemo nihil et minus cupiditate deleniti soluta incidunt quisquam aspernatur.</p>
+            <p>Facilis vero labore cumque doloribus qui voluptas, eveniet in nihil, delectus, velit earum ducimus aspernatur ipsum consequuntur quod corporis at nulla repudiandae temporibus praesentium iusto perspiciatis quasi. Voluptate, adipisci aperiam?</p>
+            <p>Ea, aspernatur quod sint recusandae fuga earum beatae iste pariatur. Aspernatur culpa, voluptatibus autem eligendi quod accusantium natus soluta alias error quidem et beatae molestias enim laudantium nihil. Atque, laboriosam.</p>
+            <p>Fuga aut enim nihil expedita dolores, velit praesentium. Repellat obcaecati, at excepturi explicabo nostrum mollitia odio vel pariatur molestias? Architecto recusandae ipsam in explicabo nisi sequi ab aperiam consectetur veritatis.</p>
+            <p>Ducimus fugit ad nulla architecto? Quaerat, voluptate soluta. Quas, porro laboriosam deserunt at totam sapiente quisquam odio libero illo sed magnam eveniet minima rerum? Id nihil assumenda voluptatum dolore eos?</p>
+            <p>Praesentium ipsam pariatur quaerat sed omnis earum placeat eveniet! Et aspernatur necessitatibus harum quia non, consequuntur itaque perspiciatis nam, nisi accusamus soluta aliquid temporibus rerum repellendus error perferendis quaerat quos.</p>
+            <p>Doloremque quam omnis voluptatum suscipit atque ex, modi sed eum nostrum similique distinctio quaerat laborum, ducimus aperiam inventore quas. Vel aspernatur deserunt unde repellat non natus nulla voluptate, necessitatibus dolorum?</p>
+            <p>Vitae error quasi sunt illum! Voluptates laudantium inventore a odit accusantium, soluta, vero sed tempore recusandae minima ab nam adipisci eum blanditiis pariatur non explicabo assumenda! Dolores blanditiis optio praesentium?</p>
+            <p>Quisquam corporis laudantium explicabo molestias optio quam ratione deleniti sint doloremque nisi ullam atque iure exercitationem et, omnis suscipit, ipsum, tempora dolorum libero autem maiores odio. Voluptates a quis maiores!</p>
+            <p>Magnam omnis ducimus, accusamus eligendi neque sit itaque fugiat quisquam sequi asperiores. Facere reprehenderit delectus rerum? Culpa quibusdam soluta eum iure ex eaque, voluptatum nemo reiciendis, assumenda aut provident velit.</p>
+            <p>Mollitia velit esse nostrum odio hic, id veniam dolorem vitae incidunt assumenda corporis. Libero perspiciatis, nihil culpa odio, incidunt harum totam atque molestiae fuga illum placeat ea reiciendis? Delectus, error?</p>
+            <p>Est, quaerat ab. Ex consectetur voluptates officia eius modi eaque, dicta velit officiis hic harum numquam inventore similique fugiat labore? Veniam accusamus provident minima vitae laboriosam consequuntur totam est a!</p>
+            <p>Ab nobis voluptatibus veritatis commodi aspernatur deserunt, non maiores natus optio nihil dignissimos excepturi quibusdam fuga aliquam perferendis, autem, nesciunt laudantium odio at deleniti necessitatibus iure. Architecto aperiam pariatur mollitia.</p>
+            <p>Magnam voluptatem praesentium aliquid modi corrupti quod repudiandae amet perferendis explicabo illum, molestias earum facere assumenda minima sapiente necessitatibus in saepe voluptatum ipsum voluptas repellendus animi optio harum? Assumenda, ducimus.</p>
+            <p>Voluptates aliquid vitae dolor minima adipisci quibusdam eligendi excepturi consequuntur facere. Delectus cupiditate et accusantium laboriosam in. Ratione perferendis, dicta autem aliquam incidunt doloremque sequi explicabo ullam sapiente quos reiciendis.</p>
+            <p>Corrupti omnis, reiciendis, quibusdam aperiam ducimus fugit accusamus praesentium nisi suscipit delectus maxime et atque quo! Asperiores voluptate rerum temporibus incidunt, sunt cupiditate sequi optio velit soluta ipsa similique et?</p>
+            <p>Officiis enim a, quibusdam repellat architecto quis optio nostrum sunt reprehenderit consequatur eum in, inventore labore temporibus mollitia distinctio id. Iusto ducimus dolores placeat consectetur vel hic odit veniam optio!</p>
+            <p>Nisi reiciendis minus excepturi. Eligendi, impedit enim odit ullam error ex neque distinctio molestiae dolor perferendis quam debitis fugiat harum! Voluptatibus, unde vero? Laudantium nostrum doloribus itaque, quod quidem sapiente?</p>
+        </section>
+        <aside>
+            <h3>hello world</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio autem a, mollitia veritatis inventore possimus dolorum sapiente quo nemo maxime praesentium. Reprehenderit reiciendis accusantium sapiente delectus autem vitae ducimus provident.</p>
+        </aside>
+    </div>
+        
+    
+</body>
+</html>
