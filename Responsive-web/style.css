@@ -135,22 +135,45 @@ strong {
 		display: flex;
 		flex-direction: column;
 		margin-top: 10rem;
+		word-break: keep-all;
+	}
+	.section-text p {
+		font-size: 1.8rem;
 	}
 	.section-field ul {
 		display: flex;
 		flex-direction: row;
-		margin-top: 60px;
+		margin-top: 6rem;
+	}
+	.section-field .field-title {
+		font-size: 2.4rem;
 	}
 
 }
 
 /* 모바일 */
 @media (max-width: 500px) {
-	.wrap {
-		margin-top: 10rem;
-	}
 	.section-field ul {
 		display: flex;
 		flex-direction: column;
 	}
+	.wrap {
+		margin-top: 10rem;
+	}
+	.section-text h1 {
+		font-size: 3.6rem;
+	}
+	.section-text p {
+		font-size: 1.4rem;
+	}
+	.section-field ul {
+		margin-top: 4rem;
+	}
+	.section-field .field-title {
+		font-size: 2rem;
+	}
+	.section-field .field-go {
+		font-size: 1.4rem;
+	}
+	
 }
