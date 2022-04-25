@@ -1,0 +1,13 @@
+$value: green;
+
+.one {
+    $value : red !global; //!global 쓰지 말기
+    color: $value;
+    .two_ {     
+        color: $value;
+    }
+}
+
+.three {
+    color: $value;
+}
