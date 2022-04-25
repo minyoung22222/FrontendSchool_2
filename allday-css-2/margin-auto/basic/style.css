@@ -1,0 +1,47 @@
+.item {
+    background-color: orange;
+    /* width: auto; 
+    div 요소의 직계부모가 제공하는 컨텐츠 크기만큼 */
+    /* 컨테이닝 블록크기 만큼 가득찬다. */  
+    /* 패딩과 마진값을 컨테이너 블록 기준으로 가득채워진다. */
+    width: 50%;
+    /* div가 활용가능한 공간 */
+    /* width: calc(50% - 80px); */
+    /* margin-left: auto; */
+    height: auto; /*자식 요소만큼*/
+    
+    padding: 40px;
+    /* 패딩을 입으면 뚱뚱해진다. */
+    /* box-sizing: border-box; */
+    
+}
+
+.item:nth-child(odd) {
+    margin-right: 50%;
+}
+
+.item:nth-child(even) {
+    margin-left: 50%;
+}
+
+/* .item-inside {
+    padding: 40px;
+} */
+
+
+.timeline {
+    width: 800px;
+    margin: 100px auto;
+}
+
+.timeline::after {
+    content: ' ';
+    background-color: dodgerblue;
+    position: absolute;
+    width: 40px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -20px;
+    bottom: -20px;
+}
