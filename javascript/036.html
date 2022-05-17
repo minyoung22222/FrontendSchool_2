@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        function NewFactory(name) {
+            this.name = name;
+            this.sayYourname = function(){
+                console.log(`삐리비리리 제 이름은 ${this.name}입니다.`);
+            }
+        }
+
+        const robot1 = new NewFactory('minyoung');
+
+        let menuList = ['탕수육','치킨','피자','햄버거', '뼈찜','솜사탕', '아이스크림'];
+        function RandomMenu(menu) {
+            this.menu = menu;
+            this.RandomMenuSay = function(){
+                console.log(`${this.menu}`);
+            };
+        }
+
+        
+        const menubot = new RandomMenu(menuList[Math.floor(Math.random() * menuList.length)]);
+    </script>
+</body>
+</html>
