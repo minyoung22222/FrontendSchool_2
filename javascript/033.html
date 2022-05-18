@@ -12,36 +12,55 @@
     <p>2. 후식으로 슈팅스타를 먹겠다.<button type="button">삭제</button></p>
     <p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다.<button type="button">삭제</button></p>
     <script>
-        const texts = document.querySelectorAll('p');
-        const deleteBtns = document.querySelectorAll('button');
-        // const pContent = pClick.innerText;
-        
-        // for(let i = 0; i<texts.length; i++){
-        //     texts[i].addEventListener('click', (e) => {
-        //         alert(e.target.textContent.slice(0,-2));
-        //     });
-        // }
-    
-        Array.prototype.forEach.call(texts, (item) => {
-            item.addEventListener('click', (e) => {
-                alert(e.target.textContent.slice(0,-2));
-            });
-        });
-        
+        const pTags = document.querySelectorAll('p');
+        const btns = document.querySelectorAll('button');
 
-        for(const item of deleteBtns) {
-            item.addEventListener('click', (e) => {
-                let result = confirm('삭제??');
-                e.stopPropagation();
-                if(result) {
-                    item.parentElement.remove();
-                    // texts.classList.remove();
-                }
+        // pTag.forEach(element => (item) {
+        //     item.addEventListener('click', (e)=>{
+        //         alert(pTag.innerContent);
+        //     })
+        // });
+        for(let i=0; i<pTags.length; i++) {
+            pTags[i].addEventListener('click',()=>{
+                alert(pTags[i].innerText.slice(0, -2));
             })
         }
+
+        for(let i=0; i<btns.length; i++){
+            btns[i].addEventListener('click',()=>{
+                confirm("삭제?", btns[i].parentElement.remove());
+            })
+        }
+    </script>
+    <script>
+        // const texts = document.querySelectorAll('p');
+        // const deleteBtns = document.querySelectorAll('button');
+        // // const pContent = pClick.innerText;
+        
+        // // for(let i = 0; i<texts.length; i++){
+        // //     texts[i].addEventListener('click', (e) => {
+        // //         alert(e.target.textContent.slice(0,-2));
+        // //     });
+        // // }
+    
+        // Array.prototype.forEach.call(texts, (item) => {
+        //     item.addEventListener('click', (e) => {
+        //         alert(e.target.textContent.slice(0,-2));
+        //     });
+        // });
         
 
-        
+        // for(const item of deleteBtns) {
+        //     item.addEventListener('click', (e) => {
+        //         let result = confirm('삭제??');
+        //         e.stopPropagation();
+        //         if(result) {
+        //             item.parentElement.remove();
+        //             // texts.classList.remove();
+        //         }
+        //     })
+        // }
     </script>
+    
 </body>
 </html>
