@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- 1. 기본 UI를 제작합니다.
 2. 요소가 편집 가능해야합니다.
 3. 버튼을 눌렀을 때 뭔가 기능이 동작해야합니다.
@@ -122,4 +123,130 @@
         
     </script>
 </body>
+=======
+<!-- 1. 기본 UI를 제작합니다.
+2. 요소가 편집 가능해야합니다.
+3. 버튼을 눌렀을 때 뭔가 기능이 동작해야합니다.
+    1. 드래그를 통해 우리가 선택한 노드가 무엇인지 파악할 수 있어야합니다.
+    2. 기능1 : 선택한 노드의 한 줄이 통으로 스타일이 바뀌는 기능
+    3. 기능2 : 선택한 노드만 바뀌는 기능 
+    
+    추가) 선택한거 취소하기 기능 구현하기
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dc545fdcb6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <article id="app">
+        <ul class="options">
+          <li>
+            <button type="button" data-command="h1">H1</button>
+          </li>
+          <li>
+            <button type="button" data-command="h2">H2</button>
+          </li>
+          <li>
+            <button type="button" data-command="h3">H3</button>
+          </li>
+          <li>
+            <button type="button" data-command="p">P</button>
+          </li>
+          <li>
+            <button type="button" data-command="strong">
+              <i class="fa-solid fa-bold"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="em">
+              <i class="fa-solid fa-italic"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="u">
+              <i class="fa-solid fa-underline"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="del">
+              <i class="fa-solid fa-strikethrough"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="style_left">
+              <i class="fa-solid fa-align-left"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="style_center">
+              <i class="fa-solid fa-align-center"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="style_right">
+              <i class="fa-solid fa-align-right"></i>
+            </button>
+          </li>
+          <li>
+            <button type="button" data-command="style_justify">
+              <i class="fa-solid fa-align-justify"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="editor" contenteditable="true">
+          <h1>나만의 wygiwyg 에디터</h1>
+          <p>Hello world~!</p>
+        </div>
+      </article>
+    <script>
+        const editor = document.querySelector('.editor');
+
+        document.querySelector('.options button').forEach(item => item.addEventListener('click', () => {
+            const command = item.dataset.command;
+
+            // css style로 바꾸는 경우
+            if(command.includes('style')) {
+                const selectedTxt = window.getSelection();
+                const parentEl = selectedTxt.anchorNode.parentElement;
+                parentEl.style.textAlign = command.slice(6);
+
+
+
+                // html 요소를 이용해서 바꾸는 경우
+            } else {
+                const createdEl = document.createElement(command);
+
+                const selectedTxt = window.getSelection();
+
+                if(command === 'h1' || command === 'h2' || command === 'h3' || command === 'p'){
+                    // conosle.log(selctedTxt);
+                    const parentEl = selectedTxt.anchorNode.parentElement;
+                    createdEl.textContent = parentEl.textContent;
+
+                    editor.replaceChild(createdEl,parentEl);    // parentEl를 createdEl 로 바꾸겠따!
+                } else {
+                    const selectedTxtRange = selectedTxt.getRangeAt(0);
+                    selectedTxtRange.surroundContents(createdEl);
+                }
+            }
+
+
+            // const command = item.dataset.command;
+            // if(command === 'h1' || command === 'h2' || command === 'h3' || command === 'p'){
+            //     document.execCommand('formatBlock', false, command); // 문서 편집 가능한 영역에 명령을 내릴 수 있음
+            // } else {
+            //     document.execCommand(command);
+            // }
+        }))
+        
+    </script>
+</body>
+>>>>>>> 7a455278f70d8c1855095bb1337370b888994c60
 </html>
