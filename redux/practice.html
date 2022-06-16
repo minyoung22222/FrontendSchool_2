@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+</head>
+
+<body>
+    <style>
+        .container {
+            border: 5px solid black;
+            padding: 10px;
+        }
+    </style>
+    <div id="input"></div>
+    <button id="inp_search">검색</button>
+    <div id="red"></div>
+    <div id="green">green</div>
+    <div id="blue">blue</div>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+        // state는 현재 상태, action은 주문 받은 것! 
+        function reducer(state, action) {
+            console.log(state, action);
+            if (state === undefined) {
+                return { color: 'yellow' }
+            }
+            var newState;
+            if (action.type === 'CHANGE_COLOR') {
+                //복제해야 합니다. 그냥 {color:'red'}이런 식으로 리턴해줘도 되긴 하는데 리덕스의 고급기능을 쓰지 못합니다.
+                newState = { ...state, color: action.color }
+
+                console.log(state)
+                console.log(newState)
+
+            } else if (action.type === 'GET_INPUT_TEXT') {
+                newState = { ...state, text: action.text }
+
+                console.log(state)
+                console.log(newState)
+            }
+            return newState;
+        }
+        // Redux는 cdn으로 생깁니다.
+        var store = Redux.createStore(
+            reducer,
+            window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() // redux dev tools를 사용하기 위한 코드
+        );
+
+        function input() {
+            let state = store.getState();
+            document.querySelector('#input').innerHTML = `
+                    <input type="text" value="txt" onclick="
+                    store.dispatch({type:'GET_INPUT_TEXT', text:'green'});
+                        ">
+            `;
+            
+            // document.querySelector('#div1').innerHTML = `
+            //     <div class="container" id="component_red" style="border-color:${state.color}">
+            //             <h1>div1</h1>
+            //     </div>
+            // `;
+        }
+        function red() {
+            let state = store.getState();
+            //type은 반드시 있어야 합니다.
+            // 바뀔 때마다 console에 store.getState()를 실행해보세요.
+            document.querySelector('#red').innerHTML = `
+                    <input type="button" value="red" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'red'});
+                        ">
+            `;
+            document.querySelector('#green').innerHTML = `
+                    <input type="button" value="green" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'green'});
+                        ">
+            `;
+
+            document.querySelector('#blue').innerHTML = `
+                    <input type="button" value="blue" onclick="
+                        store.dispatch({type:'CHANGE_COLOR', color:'blue'});
+                        ">
+            `;
+
+
+            document.querySelector('#div1').innerHTML = `
+                <div class="container" id="component_red" style="border-color:${state.color}">
+                        <h1>div1</h1>
+                </div>
+            `;
+            document.querySelector('#div2').innerHTML = `
+                <div class="container" id="component_green" style="border-color:${state.color}">
+                        <h1>div2</h1>
+                </div>
+            `;
+            document.querySelector('#div3').innerHTML = `
+                <div class="container" id="component_blue" style="border-color:${state.color}">
+                        <h1>div3</h1>
+                </div>
+            `;
+        }
+        // 값이 바뀔 때마다 red 함수를 호출
+        store.subscribe(red);
+        red();
+
+        // function blue() {
+        //     var state = store.getState();
+        //     document.querySelector('#green').innerHTML = `
+        //             <input type="button" value="green" onclick="
+        //                 store.dispatch({type:'CHANGE_COLOR', color:'green'});
+        //                 ">
+        //     `;
+        //     document.querySelector('#div2').innerHTML = `
+        //         <div class="container" id="component_green" style="border-color:${state.color}">
+        //                 <h1>div1</h1>
+        //         </div>
+        //     `;
+        // }
+        // store.subscribe(blue);
+        // blue();
+
+        // function green() {
+        //     var state = store.getState();
+        //     document.querySelector('#blue').innerHTML = `
+        //             <input type="button" value="blue" onclick="
+        //                 store.dispatch({type:'CHANGE_COLOR', color:'blue'});
+        //                 ">
+        //     `;
+        //     document.querySelector('#div3').innerHTML = `
+        //         <div class="container" id="component_blue" style="border-color:${state.color}">
+        //                 <h1>div3</h1>
+        //         </div>
+        //     `;
+        // }
+        // store.subscribe(green);
+        // green();
+
+
+        
+    </script>
+</body>
+
+</html>
